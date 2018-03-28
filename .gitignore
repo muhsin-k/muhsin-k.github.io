@@ -1,0 +1,5 @@
+firebase.json
+.firebaserc
+.DS_Store/
+public/.DS_Store
+bash.sh
