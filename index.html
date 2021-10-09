@@ -40,17 +40,24 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-123505035-3"
     ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-123505035-3");
+        <script>
+      (function(d,t) {
+        var BASE_URL="https://mobile.chatwoot.app";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'tSsRwvfRo7zYAxoo4imPsRGi',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
     </script>
-    <script id="respondio__widget" src="https://cdn.respond.io/webchat/widget/widget.js?cId=cfc6b2b6a9556ddc4d5b1551a00b4e80b50317d6ca0c747a91f7fe241fd9cabd"></script>
-  </head>
+    
+ </head>
   <style type="text/css">
     /* @font-face {
       font-family: 'Avenir';
