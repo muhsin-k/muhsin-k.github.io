@@ -40,6 +40,9 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-123505035-3"
     ></script>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
  </head>
   <style type="text/css">
     /* @font-face {
@@ -197,7 +200,7 @@
         </div>
       </div>
       <div class="container h-100" style="margin-top: 20px; text-align: center">
-        <h6>&copy 2022 Muhsin.K</h6>
+        <h6>&copy <span id="current-year"></span> Muhsin</h6>
       </div>
     </div>
   </body>
